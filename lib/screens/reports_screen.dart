@@ -56,7 +56,7 @@ class _ReportsScreenState extends State<ReportsScreen> {
           ),
           const SizedBox(height: 20),
           _buildFilterOption(),
-           SizedBox(
+          SizedBox(
             height: 10,
           ),
           FilledButton(
@@ -70,17 +70,23 @@ class _ReportsScreenState extends State<ReportsScreen> {
             },
             child: const Text("ShiftManagement"),
           ),
-            const SizedBox(height: 10,),
+          const SizedBox(
+            height: 10,
+          ),
           FilledButton(
             onPressed: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) =>  WalkThroughScreen(),
+                  builder: (context) => WalkThroughScreen(),
                 ),
               );
             },
             child: const Text("Walk Through"),
+          ),
+          FilledButton(
+            onPressed: () {},
+            child: const Text("Dummy Button"),
           ),
         ],
       ),
@@ -133,8 +139,9 @@ class _ReportsScreenState extends State<ReportsScreen> {
                   Icon(
                     icon,
                     size: width / 7,
-                    color:
-                        _selectedOption == option ? Colors.white70 : Colors.black54,
+                    color: _selectedOption == option
+                        ? Colors.white70
+                        : Colors.black54,
                   ),
                   Text(
                     label,
